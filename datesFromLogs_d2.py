@@ -14,7 +14,6 @@ urllib.request.urlretrieve('http://bit.ly/2AKSIbf', logfile)
 with open(logfile) as f:
     loglines = f.readlines()
 
-
 # for you to code:
 
 def convert_to_datetime(line):
@@ -34,5 +33,12 @@ def time_between_shutdowns(loglines):
        timedelta between the first and last one.
        Return this datetime.timedelta object.'''
 
-    shutdown_timedelta = timedelta(hours=0, minutes=3, seconds=31)
+    times = []
+    for line in loglines:
+        if "Shutdown initiated" in line:
+            time_stamp = line.split(" ", 2)[1]
+            times.append(datetime.strptime(time_stamp, "%Y-%m-%dT%H:%M:%S"))
+
+    shutdown_timedelta = times[-1] - times[0]
+
     return shutdown_timedelta
