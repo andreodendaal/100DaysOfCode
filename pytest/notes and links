@@ -4,3 +4,6 @@ git link: https://github.com/talkpython/100daysofcode-with-python-course/tree/ma
 testing code: https://docs.python-guide.org/writing/tests/
 
 virtual environment: http://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-windows/
+
+mock cheatsheet - https://medium.com/@yeraydiazdiaz/what-the-mock-cheatsheet-mocking-in-python-6a71db997832
+https://dev.to/perigk/a-comprehensive-introduction-to-unit-testing-and-mocking-with-python3-624
